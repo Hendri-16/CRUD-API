@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-
+header("access-control-allow-origin: *");
 include("helper.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {

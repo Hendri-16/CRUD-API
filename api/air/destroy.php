@@ -1,7 +1,10 @@
 <?php
 
+
 header('Content-Type: application/json');
 
+header('access-control-allow-origin: *');
+header('access-control-allow-method: DELETE');
 include("helper.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {

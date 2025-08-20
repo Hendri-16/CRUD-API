@@ -11,11 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
         $id = $_GET['id'];
         
         if ($id != "") {
-            $read = $connect->query(query: "SELECT * FROM film WHERE id = '$id'");
+            $read = $connect->query(query: "SELECT * FROM users WHERE id = '$id'");
             $user = $read->fetch_assoc();
 
             if($user){
-                $input = json_decode(file_get_contents("php://input"));
+                $input = json_decode(file_get_contents("php://input"));                                                 
 
                 $tahun = $input->tahun;
                 $unit = $input->unit;
